@@ -14,6 +14,12 @@
 		84DBF0E01F739B7D001D45FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DBF0DE1F739B7D001D45FC /* LaunchScreen.storyboard */; };
 		84DBF0EB1F739B7E001D45FC /* APITestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF0EA1F739B7E001D45FC /* APITestAppTests.swift */; };
 		84DBF0F61F739B7E001D45FC /* APITestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF0F51F739B7E001D45FC /* APITestAppUITests.swift */; };
+		84DBF1121F739BE9001D45FC /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF1061F739BE9001D45FC /* CommonUtility.m */; };
+		84DBF1131F739BE9001D45FC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF1081F739BE9001D45FC /* Constant.swift */; };
+		84DBF1141F739BE9001D45FC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF10B1F739BE9001D45FC /* Reachability.m */; };
+		84DBF1151F739BE9001D45FC /* TSearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF10D1F739BE9001D45FC /* TSearchInfo.m */; };
+		84DBF1161F739BE9001D45FC /* TWebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF10F1F739BE9001D45FC /* TWebApi.m */; };
+		84DBF1171F739BE9001D45FC /* WebApiController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DBF1111F739BE9001D45FC /* WebApiController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,19 @@
 		84DBF0F11F739B7E001D45FC /* APITestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBF0F51F739B7E001D45FC /* APITestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestAppUITests.swift; sourceTree = "<group>"; };
 		84DBF0F71F739B7E001D45FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DBF1041F739BE8001D45FC /* APITestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APITestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		84DBF1051F739BE9001D45FC /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		84DBF1061F739BE9001D45FC /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		84DBF1071F739BE9001D45FC /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		84DBF1081F739BE9001D45FC /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		84DBF10A1F739BE9001D45FC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		84DBF10B1F739BE9001D45FC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		84DBF10C1F739BE9001D45FC /* TSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSearchInfo.h; sourceTree = "<group>"; };
+		84DBF10D1F739BE9001D45FC /* TSearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSearchInfo.m; sourceTree = "<group>"; };
+		84DBF10E1F739BE9001D45FC /* TWebApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWebApi.h; sourceTree = "<group>"; };
+		84DBF10F1F739BE9001D45FC /* TWebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWebApi.m; sourceTree = "<group>"; };
+		84DBF1101F739BE9001D45FC /* WebApiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebApiController.h; sourceTree = "<group>"; };
+		84DBF1111F739BE9001D45FC /* WebApiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebApiController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +116,7 @@
 		84DBF0D41F739B7C001D45FC /* APITestApp */ = {
 			isa = PBXGroup;
 			children = (
+				84DBF1031F739B8E001D45FC /* API Files */,
 				84DBF0D51F739B7D001D45FC /* AppDelegate.swift */,
 				84DBF0D71F739B7D001D45FC /* ViewController.swift */,
 				84DBF0D91F739B7D001D45FC /* Main.storyboard */,
@@ -123,6 +143,26 @@
 				84DBF0F71F739B7E001D45FC /* Info.plist */,
 			);
 			path = APITestAppUITests;
+			sourceTree = "<group>";
+		};
+		84DBF1031F739B8E001D45FC /* API Files */ = {
+			isa = PBXGroup;
+			children = (
+				84DBF1051F739BE9001D45FC /* CommonUtility.h */,
+				84DBF1061F739BE9001D45FC /* CommonUtility.m */,
+				84DBF1071F739BE9001D45FC /* Constant.h */,
+				84DBF1081F739BE9001D45FC /* Constant.swift */,
+				84DBF10A1F739BE9001D45FC /* Reachability.h */,
+				84DBF10B1F739BE9001D45FC /* Reachability.m */,
+				84DBF10C1F739BE9001D45FC /* TSearchInfo.h */,
+				84DBF10D1F739BE9001D45FC /* TSearchInfo.m */,
+				84DBF10E1F739BE9001D45FC /* TWebApi.h */,
+				84DBF10F1F739BE9001D45FC /* TWebApi.m */,
+				84DBF1101F739BE9001D45FC /* WebApiController.h */,
+				84DBF1111F739BE9001D45FC /* WebApiController.m */,
+				84DBF1041F739BE8001D45FC /* APITestApp-Bridging-Header.h */,
+			);
+			name = "API Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +233,7 @@
 				TargetAttributes = {
 					84DBF0D11F739B7C001D45FC = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					84DBF0E51F739B7E001D45FC = {
@@ -259,8 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DBF1121F739BE9001D45FC /* CommonUtility.m in Sources */,
+				84DBF1171F739BE9001D45FC /* WebApiController.m in Sources */,
 				84DBF0D81F739B7D001D45FC /* ViewController.swift in Sources */,
+				84DBF1151F739BE9001D45FC /* TSearchInfo.m in Sources */,
+				84DBF1161F739BE9001D45FC /* TWebApi.m in Sources */,
 				84DBF0D61F739B7D001D45FC /* AppDelegate.swift in Sources */,
+				84DBF1131F739BE9001D45FC /* Constant.swift in Sources */,
+				84DBF1141F739BE9001D45FC /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = APITestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syneotek.APITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APITestApp/APITestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +476,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = APITestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.syneotek.APITestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APITestApp/APITestApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +559,7 @@
 				84DBF0FC1F739B7E001D45FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84DBF0FD1F739B7E001D45FC /* Build configuration list for PBXNativeTarget "APITestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +568,7 @@
 				84DBF0FF1F739B7E001D45FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84DBF1001F739B7E001D45FC /* Build configuration list for PBXNativeTarget "APITestAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +577,7 @@
 				84DBF1021F739B7E001D45FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var viewSpinner:UIView!
+    var activityIndicator:UIActivityIndicatorView!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -41,6 +42,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    //MARK: show spinner and stop spinner view
+    func showSpinnerView(_view:UIView)
+    {
+        viewSpinner=UIView()
+        viewSpinner?.frame=CGRect(x:Constant.GlobalConstants.screenWidth/2-35, y:Constant.GlobalConstants.screenHeight/2-35, width: 70, height: 70)
+        viewSpinner?.backgroundColor=UIColor(red: 24.0/255.0, green: 55/255.0, blue: 127/255.0, alpha: 1.0)
+        viewSpinner?.layer.borderColor=UIColor.white.cgColor
+        viewSpinner?.layer.borderWidth=1
+        viewSpinner?.layer.cornerRadius=5
+        _view .addSubview(viewSpinner!)
+        
+        activityIndicator=UIActivityIndicatorView()
+        activityIndicator?.frame = CGRect(x: (viewSpinner?.frame.size.width)!/2-15, y: (viewSpinner?.frame.size.width)!/2-15, width: 30, height: 30)
+        activityIndicator?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator?.startAnimating()
+        viewSpinner?.addSubview(activityIndicator!)
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    func stopSpinner()
+    {
+        viewSpinner?.removeFromSuperview()
+        activityIndicator?.removeFromSuperview()
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
 }
 
